@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luanthony Vega</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorgin="anonymous"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("xeBdZUSKC8AkV6Ixi");
+})();
+</script>
+</head>
+<body>
+  <section id="landing-page" onmousemove="moveBackground(event)">
+<nav>
+  <figure>
+    <img id="personal-logo" src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Monogram-LU-Logo-Design-by-Greenlines-Studios.jpg" alt="">
+    </figure>
+  <ul class="nav__link--list">
+    <li class="nav__link" onclick= toggleModel()>
+      <a href="#" class="
+      nav__link--anchor
+      link__hover--effect
+      link__hover--effect--black
+      ">About</a>
+    </li>
+    <li class="nav__link">
+      <a href="#projects" class="
+      nav__link--anchor
+      link__hover--effect
+      link__hover--effect--black
+      ">Projects</a>
+    </li>
+    <li class="nav__link" onclick="toggleModel()">
+      <a href="#" class="
+      nav__link--anchor
+      link__hover--effect
+      link__hover--effect--black
+      ">Contact</a>
+    </li>
+    <li class="nav__link click" onclick="toggleContrast()">
+      <a href="#" class="
+      nav__link--anchor
+      link__hover--effect
+      link__hover--effect--black
+      "><i class="fas fa-adjust"></i></a>
+    </li>
+  </ul>
+</nav>
+<header class="header">
+<div class="header__content">
+  <h1 class="title">Hey
+    <h1 class="title secondary">
+      I'm Luanthony Vega.
+    </h1>
+  </h1>
+  <p class="header__para">I'm a <b class="secondary">Frontend Software Engineer</b> with a strong passion for building web applications with a great user experience 
+    <br>
+    here's a bit more <b class="secondary click" onclick="toggleModel()">about me.</b>
+  </p>
+<div class="social__list">
+  <a href="https://www.linkedin.com/in/luanthony-vega/" target="_blank" class="social__link click">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://github.com/Luvega1" target="_blank" class="social__link click">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="./assets/David Bragg Resume.pdf" target="_blank" class="social__link click">
+    <i class="fas fa-file-pdf"></i>
+  </a>
+</div>
+</div>
+</header>
+<a href="#">
+
+  <button class="mail__btn click" onclick="toggleModel()">
+    <i class="fas fa-envelope"></i>
+  </button>
+</a>
+<a href="#projects" class="scroll">
+  <div class="scroll__icon click">
+  </div>
+</a>
+<div class="model">
+  <div class="model__half model__about">
+    <h3 class="model__title model__title--about">Here's a bit about me.</h3>
+    <h4 class="model__sub-title model__sub-title--about">Frontend Software Engineer</h4>
+    <p class="model__para">I'm a 25 year old <b class="secondary">frontend software engineer</b> with a strong passion for developing websites with great <b class="secondary">user experiences.</b>
+      <br>
+      I currently work on extremely difficult engineering problems and learn from a team consiting of the most <b class="secondary">talented</b> and <b class="secondary">experienced</b> software engineers every day.
+    </p>
+    <div class="model__languages">
+      <figure class="model__language">
+        <img class="model__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" alt="">
+        <span class="language__name">HTML</span>
+      </figure>
+      <figure class="model__language">
+        <img class="model__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/800px-CSS3_logo_and_wordmark.svg.png" alt="">
+        <span class="language__name">CSS</span>
+      </figure>
+      <figure class="model__language">
+        <img class="model__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" alt="">
+        <span class="language__name">JavaScript</span>
+      </figure>
+      <figure class="model__language">
+        <img class="model__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="">
+        <span class="language__name">React</span>
+      </figure>
+    </div>
+  </div>
+<div class="model__half model__contact">
+  <i class="fas fa-times model__exit click" onclick="toggleModel()"></i>
+  <h3 class="model__title model__title--contact">Let's have a chat!</h3>
+  <h4 class="model__sub-title model__sub-title--contact">I'm currently open to new opportunities.</h4>
+  <form id="contact__form" onsubmit="contact(event)">
+    <div class="form__item">
+      <label class="form__item--label">Name</label>
+      <input class="input" name="user_name" type="text" required></input>
+    </div>
+    <div class="form__item">
+      <label class="form__item--label">E-mail</label>
+      <input class="input" name="user_email" type="email" required></input>
+    </div>
+    <div class="form__item">
+      <label class="form__item--label">Message</label>
+      <textarea class="input" name="message" type="text" required></textarea>
+      </div>
+      <button id="contact__submit" class="form__submit">Send it my way</button>
+    </form>
+    <div class="model__overlay model__overlay--loading">
+      <i class="fas fa-spinner"></i>
+    </div>
+  <div class=" model__overlay model__overlay--success">
+    Thanks for the message! Looking forward to speaking with you soon!
+  </div>
+</div>
+</section>
+<img src="./assets/semi circle.svg" class="shape shape--0">
+<img src="./assets/circle.svg" class="shape shape--1">
+<img src="./assets/squiggly.svg" class="shape shape--2">
+<img src="./assets/circle.svg" class="shape shape--3">
+<img src="./assets/triangle.svg" class="shape shape--4">
+<img src="./assets/circle.svg" class="shape shape--5">
+<img src="./assets/squiggly.svg" class="shape shape--6">
+<img src="./assets/circle.svg" class="shape shape--7">
+<img src="./assets/semi circle.svg" class="shape shape--8">
+  <section id="projects">
+    <div class="container">
+<div class="row">
+  <h1 class="section__title">
+    Here are some of my <span class="secondary">projects</span>
+  </h1>
+  <ul class="project__list">
+    <li class="project">
+<div class="project__wrapper">
+  <img src="./assets/blinker mockup.png" class="project__img" alt="">
+  <div class="project__wrapper--bg"></div>
+<div class="project__description">
+  <h3 class="project__description--title">
+    Treat project
+  </h3>
+  <h4 class="project__description--sub-title">
+    Html, CSS, JavaScript
+  </h4>
+  <p class="project__description--para">
+Created Treat webpage using HTML, CSS, and JavaScript
+  </p>
+  <div class="project__description--links">
+    <a href="" class="project__description--link">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="" class="project__description--link">
+      <i class="fas fa-link"></i>
+    </a>
+  </div>
+</div>
+</div>
+    </li>
+    <li class="project">
+<div class="project__wrapper">
+  <img src="https://t-mobile.scene7.com/is/image/Tmusprod/netflix-hero_desktop:HERO-desktop?fmt=png&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0" class="project__img" alt="">
+  <div class="project__wrapper--bg"></div>
+<div class="project__description">
+  <h3 class="project__description--title">
+    Netflix (cloned)
+  </h3>
+  <h4 class="project__description--sub-title">
+    Html, CSS,
+  </h4>
+  <p class="project__description--para">
+Cloned Netflix using html and css  
+  </p>
+  <div class="project__description--links">
+    <a href="https://github.com/Luvega1/Netflix-Clone" target="_blank" class="project__description--link">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="file:///Users/coach/Desktop/netflix/index.html" target="_blank" class="project__description--link">
+      <i class="fas fa-link"></i>
+    </a>
+  </div>
+</div>
+</div>
+    </li>
+  </ul>
+</div>
+</div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure>
+          <img class="footer__logo--img" src="https://www.creativefabrica.com/wp-content/uploads/2019/03/Monogram-LU-Logo-Design-by-Greenlines-Studios.jpg" alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a href="https://github.com/Luvega1" target="_blank" class="
+          footer__social--link
+          link__hover--effect
+          link__hover--effect--white">
+          Github
+        </a>
+        <a href="https://www.linkedin.com/in/luanthony-vega/" target="_blank" onclick="toggleModel()" class="
+        footer__social--link
+        link__hover--effect
+        link__hover--effect--white">
+        linkedIn
+      </a>
+      <a href="" target="_blank" class="
+      footer__social--link
+      link__hover--effect
+      link__hover--effect--white">
+      Contact
+    </a>
+    <a href="./assets/" target="_blank" class="
+    footer__social--link
+    link__hover--effect
+    link__hover--effect--white">
+    Resume
+  </a>
+</div>
+<div class="footer__copyright">Copyright © 2023 Luanthony Vega </div>
+</div>
+</div>
+</footer>
+</body>
+</html>
